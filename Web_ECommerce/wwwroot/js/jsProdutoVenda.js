@@ -56,7 +56,11 @@ ObjetoVenda.CarregaProdutos = function () {
     });
 };
 
-
+ObjetoVenda.CarregaQtdCarrinho = function () {
+    $("#qtdCarrinho").text("(1000)");
+    setTimeout(ObjetoVenda.CarregaQtdCarrinho, 10000);
+}
 $(function () {
     ObjetoVenda.CarregaProdutos();
+    ObjetoVenda.CarregaQtdCarrinho();
 });

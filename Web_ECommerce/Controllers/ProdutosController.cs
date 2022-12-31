@@ -57,6 +57,8 @@ namespace Web_ECommerce.Controllers
                         ModelState.AddModelError(item.NomePropriedade, item.message);
                     }
                     //TODO -- Se de error trocar para retornar view Edit
+
+
                     return View(nameof(Create), produto);
                 }
                
@@ -90,8 +92,8 @@ namespace Web_ECommerce.Controllers
                     {
                         ModelState.AddModelError(item.NomePropriedade, item.message);
                     }
-                  /*  ViewBag.Alerta = true;
-                    ViewBag.Mesagem = produto.Notitycoes;*/
+                   ViewBag.Alerta = true;
+                    ViewBag.Mensagem = "Verifique! Ocorreu algum erro!";
 
                      return View(nameof(Edit), produto);
                 }
