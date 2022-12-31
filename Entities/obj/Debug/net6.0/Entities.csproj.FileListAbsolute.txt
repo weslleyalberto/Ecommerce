@@ -1,0 +1,14 @@
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\bin\Debug\net6.0\Entities.deps.json
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\bin\Debug\net6.0\Entities.runtimeconfig.json
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\bin\Debug\net6.0\Entities.dll
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\bin\Debug\net6.0\Entities.pdb
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\obj\Debug\net6.0\Entities.dll
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\obj\Debug\net6.0\refint\Entities.dll
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\obj\Debug\net6.0\Entities.pdb
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\obj\Debug\net6.0\Entities.genruntimeconfig.cache
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Entities\obj\Debug\net6.0\ref\Entities.dll

@@ -1,0 +1,15 @@
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\bin\Debug\net6.0\Domain.dll
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\bin\Debug\net6.0\Domain.pdb
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\bin\Debug\net6.0\Entities.dll
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\bin\Debug\net6.0\Entities.pdb
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\obj\Debug\net6.0\Domain.csproj.CopyComplete
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\obj\Debug\net6.0\Domain.dll
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\obj\Debug\net6.0\Domain.pdb
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Domain\obj\Debug\net6.0\ref\Domain.dll
