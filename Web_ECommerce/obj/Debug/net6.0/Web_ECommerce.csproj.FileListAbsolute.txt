@@ -284,3 +284,4 @@ C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Web_ECommerce
 C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Web_ECommerce\obj\Debug\net6.0\Web_ECommerce.pdb
 C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Web_ECommerce\obj\Debug\net6.0\Web_ECommerce.genruntimeconfig.cache
 C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Web_ECommerce\obj\Debug\net6.0\ref\Web_ECommerce.dll
+C:\Users\wesll\OneDrive\Área de Trabalho\DDD-NetCore\EcommerceDDD\Web_ECommerce\obj\Debug\net6.0\Web_ECommerce.MvcApplicationPartsAssemblyInfo.cs

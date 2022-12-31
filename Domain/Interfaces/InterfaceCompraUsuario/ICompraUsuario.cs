@@ -5,5 +5,6 @@ namespace Domain.Interfaces.InterfaceCompraUsuario
 {
     public interface ICompraUsuario : IGeneric<CompraUsuario>
     {
+        Task<int> QuantidadeProdutoCarrinhoUsuario(string userId);
     }
 }

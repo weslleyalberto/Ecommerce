@@ -12,7 +12,10 @@ namespace ApplicationApp.OpenApp
         {
             _compraUsuario = compraUsuario;
         }
-
+        public async Task<int> QuantidadeProdutoCarrinhoUsuario(string userId)
+        {
+            return await _compraUsuario.QuantidadeProdutoCarrinhoUsuario(userId);
+        }
         public async Task Add(CompraUsuario objeto)
         {
             await _compraUsuario.Add(objeto);
@@ -32,6 +35,8 @@ namespace ApplicationApp.OpenApp
         {
             return await _compraUsuario.List();
         }
+
+      
 
         public async Task Update(CompraUsuario objeto)
         {

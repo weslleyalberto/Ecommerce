@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mkO6v/o+vcQ9EZ0c3z7XkYrEvMADD6dZCM6cu8A0mqQ=",
+  "Hash": "f+ghEszRRDZ5aq6L7Qj4TjpThQSIXLaVJn4o+KH/34U=",
   "Source": "Web_ECommerce",
   "BasePath": "_content/Web_ECommerce",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\wesll\\OneDrive\\Área de Trabalho\\DDD-NetCore\\EcommerceDDD\\Web_ECommerce\\wwwroot\\img\\carrinho.png",
+      "SourceId": "Web_ECommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wesll\\OneDrive\\Área de Trabalho\\DDD-NetCore\\EcommerceDDD\\Web_ECommerce\\wwwroot\\",
+      "BasePath": "_content/Web_ECommerce",
+      "RelativePath": "img/carrinho.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\carrinho.png"
     },
     {
       "Identity": "C:\\Users\\wesll\\OneDrive\\Área de Trabalho\\DDD-NetCore\\EcommerceDDD\\Web_ECommerce\\wwwroot\\js\\jsProdutoVenda.js",
