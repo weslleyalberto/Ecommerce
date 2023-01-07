@@ -19,7 +19,7 @@ namespace Infrastructure.Repository.Repositories
         {
             using (var data = new ContextBase(_optionsBuilder))
             {
-                return await data.CompraUsuarios.CountAsync(c=> c.ApplicationUserId.Equals(userId));
+                return await data.CompraUsuarios.CountAsync(c=> c.ApplicationUserId.Equals(userId) && c.Estado == Entities.Entities.Enuns.EstadoCompra.Produto_Carrinho);
             }
         }
     }

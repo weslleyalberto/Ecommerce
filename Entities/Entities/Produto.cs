@@ -1,6 +1,7 @@
 ﻿using Entities.Notifications;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Entities.Entities
 {
@@ -50,5 +51,10 @@ namespace Entities.Entities
         [Column("PRD_DATA_ALTERACAO")]
         [Display(Name = "Data de Alteração")]
         public DateTime DataAlteracao { get; set; }
+        [NotMapped]
+        public int IdProdutoCarrinho { get; set; }
+        [NotMapped]
+        public int QtdCompra { get; set; }
+
     }
 }

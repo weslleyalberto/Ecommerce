@@ -23,6 +23,46 @@ namespace Infrastructure.Repository.Repositories
             }
         }
 
+        public async Task<List<Produto>> ListarProdutosCarrinhoUsuario(string userId)
+        {
+            using (var banco = new ContextBase(_ooptionsBuilder))
+            {
+                var produtoCarrinho = await (from p in banco.Produtos
+                                       join c in banco.CompraUsuarios on p.Id equals c.IdProduto
+                                       where c.ApplicationUserId.Equals(userId) && c.Estado == Entities.Entities.Enuns.EstadoCompra.Produto_Carrinho
+                                       select new Produto
+                                       {
+                                           Id= p.Id,
+                                           Nome = p.Nome,
+                                           Descricao = p.Descricao,
+                                           Observacao= p.Observacao,
+                                           Valor = p.Valor,
+                                           QtdCompra = c.QtdCompra,
+                                           IdProdutoCarrinho = c.Id
+                                       }).AsNoTracking().ToListAsync();
+                return produtoCarrinho; 
+            }
+        }
+        public async Task<Produto> ObterProdutoCarrinho(int idProduto)
+        {
+            using (var banco = new ContextBase(_ooptionsBuilder))
+            {
+                var produtoCarrinho = await(from p in banco.Produtos
+                                            join c in banco.CompraUsuarios on p.Id equals c.IdProduto
+                                            where c.Id.Equals(idProduto) && c.Estado == Entities.Entities.Enuns.EstadoCompra.Produto_Carrinho
+                                            select new Produto
+                                            {
+                                                Id = p.Id,
+                                                Nome = p.Nome,
+                                                Descricao = p.Descricao,
+                                                Observacao = p.Observacao,
+                                                Valor = p.Valor,
+                                                QtdCompra = c.QtdCompra,
+                                                IdProdutoCarrinho = c.Id
+                                            }).AsNoTracking().FirstOrDefaultAsync();
+                return produtoCarrinho;
+            }
+        }
         public async Task<List<Produto>> ListarProdutosUsuario(string userId)
         {
             using (var banco = new ContextBase(_ooptionsBuilder))
@@ -30,5 +70,7 @@ namespace Infrastructure.Repository.Repositories
                 return await banco.Produtos.Where(c=> c.UserId== userId).AsNoTracking().ToListAsync();    
             }
         }
+
+      
     }
 }

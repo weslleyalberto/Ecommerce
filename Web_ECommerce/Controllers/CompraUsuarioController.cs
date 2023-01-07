@@ -11,7 +11,9 @@ namespace Web_ECommerce.Controllers
         private readonly InterfaceCompraUsuarioApp _interfaceCompraUsuarioApp;
         private readonly InterfaceProductApp _interfaceProductApp;
 
-        public CompraUsuarioController(UserManager<ApplicationUser> userManager, InterfaceCompraUsuarioApp interfaceCompraUsuarioApp, InterfaceProductApp interfaceProductApp)
+        public CompraUsuarioController(UserManager<ApplicationUser> userManager, 
+            InterfaceCompraUsuarioApp interfaceCompraUsuarioApp, 
+            InterfaceProductApp interfaceProductApp)
         {
             _userManager = userManager;
             _interfaceCompraUsuarioApp = interfaceCompraUsuarioApp;
@@ -29,7 +31,7 @@ namespace Web_ECommerce.Controllers
                 {
                    IdProduto = Convert.ToInt32(id),
                     QtdCompra = Convert.ToInt32(qtd),
-                    Estado = Entities.Entities.Enuns.EstadoCompra.Produto_Caminho,
+                    Estado = Entities.Entities.Enuns.EstadoCompra.Produto_Carrinho,
                   
                      ApplicationUserId = usuario.Id,
 
