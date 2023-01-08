@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -79,7 +80,45 @@ namespace Web_ECommerce.Areas.Identity.Pages.Account
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
-
+            [Required]
+            [MaxLength(11)]
+            [MinLength(11)]
+            [Display(Name = "CPF")]
+            public string CPF { get; set; }
+            [Column("USR_IDADE")]
+            [Display(Name = "Idade")]
+            public int? Idade { get; set; }
+            [Required]
+            [Column("USR_NOME")]
+            [StringLength(255)]
+            [Display(Name = "Nome")]
+            public string? Nome { get; set; }
+            [Required]
+            [Column("USR_CEP")]
+            [StringLength(15)]
+            [Display(Name = "CEP")]
+            public string? CEP { get; set; }
+            [Required]
+            [Column("USR_ENDERECO")]
+            [StringLength(255)]
+            [Display(Name = "Endereço")]
+            public string? Endereco { get; set; }
+            [Column("USR_COMPLEMENTO_ENDERECO")]
+            [StringLength(450)]
+            [Display(Name = "Complemento")]
+            public string? Complemento { get; set; }
+            [Column("USR_CELULAR")]
+            [StringLength(20)]
+            [Display(Name = "Celular")]
+            public string? Celular { get; set; }
+            [Column("USR_TELEFONE")]
+            [StringLength(20)]
+            [Display(Name = "Telefone")]
+            public string? Telefone { get; set; }
+            [Column("USR_ESTADO")]
+            [Display(Name = "Estado")]
+            public bool? Estado { get; set; }
+           
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -113,7 +152,24 @@ namespace Web_ECommerce.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = CreateUser();
+                // var user = CreateUse();
+                var user = new ApplicationUser
+                {
+                    UserName = Input.Email,
+                    Email = Input.Email,
+                    Celular = Input.Celular,
+                    CEP = Input.CEP,
+                    CPF = Input.CPF,
+                    Telefone = Input.Telefone,
+                    Endereco = Input.Endereco,
+                    Complemento = Input.Complemento,
+                    Idade = Input.Idade,
+                    Nome = Input.Nome,
+                    Estado = true,
+                    Tipo = Entities.Entities.Enuns.TipoUsuario.Comum
+
+
+                };
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
