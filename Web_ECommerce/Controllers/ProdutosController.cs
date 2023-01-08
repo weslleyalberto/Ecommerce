@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security;
+using System.Security.Permissions;
 
 namespace Web_ECommerce.Controllers
 {
@@ -14,12 +16,14 @@ namespace Web_ECommerce.Controllers
         private readonly InterfaceProductApp _interfaceProductApp;
         private readonly ICompraUsuario _compraUsuario;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProdutosController(InterfaceProductApp interfaceProductApp,UserManager<ApplicationUser> userManager,ICompraUsuario compraUsuario)
+        public ProdutosController(InterfaceProductApp interfaceProductApp,UserManager<ApplicationUser> userManager,ICompraUsuario compraUsuario,IWebHostEnvironment webHostEnvironment)
         {
             _interfaceProductApp = interfaceProductApp;
             _userManager = userManager;
             _compraUsuario= compraUsuario;
+            _webHostEnvironment = webHostEnvironment;
             
         }
 
@@ -65,6 +69,7 @@ namespace Web_ECommerce.Controllers
 
                     return View(nameof(Create), produto);
                 }
+                await SalvarImagemProduto(produto); 
                
                
             }
@@ -166,6 +171,34 @@ namespace Web_ECommerce.Controllers
             {
                 return View();
             }
+        }
+        public async Task SalvarImagemProduto(Produto produtoTela)
+        {
+            try
+            {
+                var produto = await _interfaceProductApp.GetEntityById(produtoTela.Id);
+                if (produtoTela.Imagem is not null)
+                {
+                    var webRoot = _webHostEnvironment.WebRootPath;
+                    var permissionSet = new PermissionSet(System.Security.Permissions.PermissionState.Unrestricted);
+                    var writePermission = new FileIOPermission(FileIOPermissionAccess.Append,
+                        string.Concat(webRoot, "/imgProdutos"));
+                    permissionSet.AddPermission(writePermission);
+                    var extension = Path.GetExtension(produtoTela.Imagem.FileName);
+                    var nomeArquivo = string.Concat(produto.Id.ToString(), extension);
+                    var diretorioArquivosalvar = string.Concat(webRoot, "\\imgProdutos\\", nomeArquivo);
+                    produtoTela.Imagem.CopyTo(new FileStream(diretorioArquivosalvar, FileMode.Create));
+                    produto.Url = string.Concat("https://localhost:7136", "/imgProdutos/", nomeArquivo);
+                    await _interfaceProductApp.UpdateProduct(produto);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+
+           
         }
         private async Task<string> RetornarIdUsuarioLogado()
         {

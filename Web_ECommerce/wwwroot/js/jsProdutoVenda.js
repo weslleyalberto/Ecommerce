@@ -41,12 +41,15 @@ ObjetoVenda.CarregaProdutos = function () {
             var htmlConteudo = "";
 
             data.forEach(function (entitie) {
-                htmlConteudo += "<div class='col-xs-12 cold-sm-4 col-lg-4>'";
+                htmlConteudo += "<div class='col-xs-12 col-sm-4 col-lg-4>'";
 
                 var idNome = "nome_" + entitie.id;
                 var idQtd = "qtd_" + entitie.id;
                 htmlConteudo += "<label id='" + idNome + "'> Produtos: " + entitie.nome + "</label><br/>";
-                htmlConteudo += "<label> Valor: " + entitie.valor + "</label></br>";
+                htmlConteudo += "<br/><label> Valor: " + entitie.valor + "</label></br>";
+                if (entitie.url != null && entitie.url != "" && entitie.url != undefined) {
+                    htmlConteudo += "<img width:'200' height:'100' src='" + entitie.url + "'/> <br/>";
+                }
                 htmlConteudo += "Quantidade : <input type='number' value='1' id='" + idQtd + "'>";
                 htmlConteudo += "<input type='button' onclick='ObjetoVenda.AdicionarCarrinho(" + entitie.id+")' value='Comprar'></br>";
                 htmlConteudo += "</div>";

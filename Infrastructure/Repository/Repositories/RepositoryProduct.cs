@@ -38,7 +38,8 @@ namespace Infrastructure.Repository.Repositories
                                            Observacao= p.Observacao,
                                            Valor = p.Valor,
                                            QtdCompra = c.QtdCompra,
-                                           IdProdutoCarrinho = c.Id
+                                           IdProdutoCarrinho = c.Id,
+                                           Url = p.Url
                                        }).AsNoTracking().ToListAsync();
                 return produtoCarrinho; 
             }
@@ -58,7 +59,8 @@ namespace Infrastructure.Repository.Repositories
                                                 Observacao = p.Observacao,
                                                 Valor = p.Valor,
                                                 QtdCompra = c.QtdCompra,
-                                                IdProdutoCarrinho = c.Id
+                                                IdProdutoCarrinho = c.Id,
+                                                Url = p.Url
                                             }).AsNoTracking().FirstOrDefaultAsync();
                 return produtoCarrinho;
             }
