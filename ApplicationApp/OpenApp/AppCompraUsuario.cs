@@ -1,5 +1,6 @@
 ﻿using ApplicationApp.Interfaces;
 using Domain.Interfaces.InterfaceCompraUsuario;
+using Domain.Interfaces.InterfaceServices;
 using Entities.Entities;
 
 namespace ApplicationApp.OpenApp
@@ -7,10 +8,12 @@ namespace ApplicationApp.OpenApp
     public class AppCompraUsuario : InterfaceCompraUsuarioApp
     {
         private readonly ICompraUsuario _compraUsuario;
+        private readonly IServiceCompraUsuario _serviceCompraUsuario;
 
-        public AppCompraUsuario(ICompraUsuario compraUsuario)
+        public AppCompraUsuario(ICompraUsuario compraUsuario,IServiceCompraUsuario serviceCompraUsuario)
         {
             _compraUsuario = compraUsuario;
+            _serviceCompraUsuario = serviceCompraUsuario;
         }
         public async Task<int> QuantidadeProdutoCarrinhoUsuario(string userId)
         {
@@ -41,6 +44,21 @@ namespace ApplicationApp.OpenApp
         public async Task Update(CompraUsuario objeto)
         {
            await _compraUsuario.Update(objeto);
+        }
+
+        public async Task<CompraUsuario> CarrinhoCompras(string userId)
+        {
+            return await _serviceCompraUsuario.CarrinhoCompras(userId);
+        }
+
+        public async Task<CompraUsuario> ProdutosComprados(string userId)
+        {
+            return await _serviceCompraUsuario.ProdutosComprados(userId);
+        }
+
+        public async Task<bool> ConfirmaCompraCarrinhoUsuario(string userId)
+        {
+            return await _compraUsuario.ConfirmaCompraCarrinhoUsuario(userId);
         }
     }
 }

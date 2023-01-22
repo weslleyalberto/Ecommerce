@@ -176,6 +176,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/wesll/OneDrive/Área de Trabalho/DDD-NetCore/EcommerceDDD/Web_ECommerce/Views/CompraUsuario/Finalizarcompra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhVXN1YXJpb1xGaW5hbGl6YXJjb21wcmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wesll/OneDrive/Área de Trabalho/DDD-NetCore/EcommerceDDD/Web_ECommerce/Views/CompraUsuario/MinhasCompras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhVXN1YXJpb1xNaW5oYXNDb21wcmFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/wesll/OneDrive/Área de Trabalho/DDD-NetCore/EcommerceDDD/Web_ECommerce/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

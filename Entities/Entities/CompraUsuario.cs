@@ -34,6 +34,22 @@ namespace Entities.Entities
         public string ApplicationUserId { get; set; }
         public virtual ApplicationUser? ApplicationUser { get; set; }
 
+        [NotMapped]
+        [Display(Name ="Quantidade Total")]
+        public int QuantidadeProdutos { get; set; }
+
+        [NotMapped]
+        [Display(Name ="Valor Total")]
+        public decimal ValorTotal { get; set; }
+
+        [NotMapped]
+        [Display(Name ="Endereço de entrega")]
+        public string  EnderecoCompleto { get; set; }
+
+        [NotMapped]
+        public List<Produto> ListaProdutos { get; set; }
+
+
 
     }
 }

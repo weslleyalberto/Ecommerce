@@ -55,6 +55,33 @@ namespace Web_ECommerce.Controllers
             }
             return Json(new {sucesso = false, qtd = qtd});
         }
+        [HttpGet]
+        public async  Task<IActionResult> Finalizarcompra()
+        {
+            var usuario = await _userManager.GetUserAsync(User);
+            var compraUsuario = await _interfaceCompraUsuarioApp.CarrinhoCompras(usuario.Id);
+            return View(compraUsuario);
+        }
+        public async Task<IActionResult> MinhasCompras(bool message = false)
+        {
+            var usuario = await _userManager.GetUserAsync(User);
+            var compraUsuario = await _interfaceCompraUsuarioApp.ProdutosComprados(usuario.Id);
+            if (message)
+            {
+                ViewBag.Sucesso = true;
+                ViewBag.Mesagem = "Compra Efetivada com sucesso. Pague o boleto para garantir sua compra!";
+            }
+            return View(compraUsuario);
+        }
+        public async Task<IActionResult> ConfirmaCompra()
+        {
+            var usuario = await _userManager.GetUserAsync(User);
+            var sucesso = await _interfaceCompraUsuarioApp.ConfirmaCompraCarrinhoUsuario(usuario.Id);
+            if (sucesso)
+                return RedirectToAction(nameof(MinhasCompras), new { mensagem = true });
+            else
+                return RedirectToAction(nameof(Finalizarcompra));
+        }
 
     }
 }
